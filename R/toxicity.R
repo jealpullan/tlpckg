@@ -1,7 +1,7 @@
 #' Function that returns species toxicity
 #' @export Conc
 
-mlr <- function(sensitivity, tMLR=MLR, input){
+mlr <- function(sensitivity = nidata, tMLR = MLR, input){
   Conc <- vector(length = nrow(sensitivity))
   for(i in 1:nrow(sensitivity)){
     if(sensitivity[i,]$Species.Type=="Fish"){
