@@ -8,5 +8,7 @@ fitSSD <- function(sens, input, hcv=NULL){
   preds <- predict(dists)
   ssd_plot(p, preds, left = "Conc", hc=hcv, label="PlotLabel", shift_x = 1.1, size=3)  + 
     scale_x_continuous(breaks=breaks_log())+ theme_classic() +
-    xlab("Nickel, micrograms per litre") + ylab("Species Affected")
+    xlab("Nickel, micrograms per litre") + ylab("Species Affected") +
+    theme(axis.text=element_text(size=12), axis.title=element_text(size=14),
+          plot.margin=unit(c(1,1,1,1),"cm"))
 }
